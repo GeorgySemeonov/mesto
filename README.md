@@ -8,4 +8,4 @@
 3. Адаптивная верстка для разных разрешений устройств.
 4. Работа с ветками Git.
 
-[Ссылка на сайт "Mesto"](https://georgysemeonov.github.io/mesto /)
+[-Ссылка на сайт "Mesto"](https://georgysemeonov.github.io/mesto/)

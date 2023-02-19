@@ -1,0 +1,10 @@
+.add-button-icon {
+    max-width: 22px;
+}
+
+@media (max-width: 680px) {
+    .add-button-icon {
+        max-width: 16px;
+    }
+
+}

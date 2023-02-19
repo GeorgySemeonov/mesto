@@ -1,0 +1,8 @@
+.profile__photo {
+    min-width: 120px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border-radius: 50%;
+    overflow: hidden;
+}

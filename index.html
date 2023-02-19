@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Mesto</title>
+    <script src="./scripts/index.js" defer></script>
+</head>
+
+<body class="page">
+    <header class="header">
+        <img src="./images/header-logo.png" class="header__logo" alt="Место">
+    </header>
+
+    <section class="profile">
+        <div class="profile__avatar"> <img src="./images/avatar.jpg" class="profile__photo" alt="Аватар"> </div>
+        <div class="profile__info">
+            <h1 class="profile__title">Жак-Ив Кусто </h1>
+            <button class="profile__edit"><img src="./images/edit-profile-icon.svg" class="profile__edit-icon"
+                    alt="Редактировать"></button>
+            <p class="profile__subtitle">Исследователь океана</p>
+        </div>
+        <button class="add-button"><img src="./images/create-profile-icon.svg" class="add-button-icon" alt=""></button>
+    </section>
+
+    <section class="elements">
+        <ul class="elements__list">
+            <li class="element">
+                <img src="./images/dombay.jpg" class="element__image" alt="">
+                <h2 class="element__title">Домбай </h2><button class="like-button"><img src="./images/like-icon.svg"
+                        class="like-icon" alt="Лайк"></button>
+            </li>
+            <li class="element">
+                <img src="./images/karachaevsk.jpg" class="element__image" alt="">
+                <h2 class="element__title">Карачаевск </h2><button class="like-button"><img src="./images/like-icon.svg"
+                        class="like-icon" alt="Лайк"></button>
+            </li>
+            <li class="element">
+                <img src="./images/еlbrus-mountain.jpg" class="element__image" alt="">
+                <h2 class="element__title"> Гора Эльбрус</h2><button class="like-button"><img
+                        src="./images/like-icon.svg" class="like-icon" alt="Лайк"></button>
+            </li>
+            <li class="element">
+                <img src="./images/paris.jpg" class="element__image" alt="">
+                <h2 class="element__title">Париж </h2><button class="like-button"><img src="./images/like-icon.svg"
+                        class="like-icon" alt="Лайк"></button>
+            </li>
+            <li class="element">
+                <img src="./images/volgograd.jpg" class="element__image" alt="">
+                <h2 class="element__title">Волгоград </h2><button class="like-button"><img src="./images/like-icon.svg"
+                        class="like-icon" alt="Лайк"></button>
+            </li>
+            <li class="element">
+                <img src="./images/saint-petersburg.jpg" class="element__image" alt="">
+                <h2 class="element__title">Санкт-Петербург </h2><button type="button" class="like-button"><img
+                        src="./images/like-icon.svg" class="like-icon" alt="Лайк"></button>
+            </li>
+
+
+        </ul>
+    </section>
+
+    <section class="footer">
+        <h2 class="footer__copyright">&copy; 2020 Mesto Russia</h2>
+    </section>
+
+    <div class="popup ">
+        <button class="popup__close"><img class="popup__close-icon" src="./images/close-Icon.svg" alt=""></button>
+        <div class="popup__container">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <form id="popupForms" class="popup__forms">
+                <input id="userNameForm" class="popup__form" type="text" name="name" placeholder="Имя">
+                <input id="userOccupationForm" class="popup__form" type="text" name="name" placeholder="Должность">
+                <button type="submit" class="popup__button">Сохранить</button>
+            </form>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

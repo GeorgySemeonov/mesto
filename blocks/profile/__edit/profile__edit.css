@@ -3,7 +3,6 @@
     background-color: #000000;
     width: 24px;
     height: 24px;
-    align-self: flex-end;
     transition: opacity 0.3s ease;
     padding: 0;
     display: flex;

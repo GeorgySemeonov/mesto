@@ -13,7 +13,7 @@
         ". close"
         "content .";
     gap: 8px;
-    display: none;
+    
 }
 
 @media (max-width: 600px) {

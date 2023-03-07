@@ -1,6 +1,7 @@
 .element__image {
     width: 100%;
     min-width: 282px;
-    min-height: 282px;
+    max-height: 282px;
     grid-column: span 2;
+    object-fit: cover;
 }

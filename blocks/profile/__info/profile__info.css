@@ -1,15 +1,15 @@
 .profile__info {
     max-width: 336px;
-    max-height: 73px;
+    height: auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
 }
 
 
-@media (max-width: 680px) {
+@media (max-width: 800px) {
     .profile__info {
         justify-content: center;
-        min-height: 54px;
+        
     }
 }

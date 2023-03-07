@@ -1,6 +1,6 @@
 .profile__edit {
     border: 1px solid #FFFFFF;
-    background-color: #000000;
+    background-color: transparent;
     width: 24px;
     height: 24px;
     transition: opacity 0.3s ease;
@@ -17,12 +17,10 @@
     opacity: 0.6;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 800px) {
     .profile__edit {
         width: 18px;
         height: 18px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        
     }
 }

@@ -1,5 +1,5 @@
 
-@import url(../vendors/normalize.css);
+@import url(../vendor/normalize.css);
 @import url(../fonts/fonts.css);
 
 @import url(../blocks/page/page.css);
@@ -14,9 +14,9 @@
 
 @import url(../blocks/popup/popup.css);
 
-@import url(../blocks/add-button/add-button.css);
+@import url(../blocks/profile/__add-button/profile__add-button.css);
 
-@import url(../blocks/like-button/like-button.css);
+@import url(../blocks/element/__like-icon/element__like-icon.css);
 
 @import url(../blocks/footer/footer.css);
 
@@ -32,14 +32,14 @@
 @import url(../blocks/profile/__edit-icon/profile__edit-icon.css);
 
 
-@import url(../blocks/add-button-icon/add-button-icon.css);
+@import url(../blocks/profile/__add-button-icon/profile__add-button-icon.css);
 
 @import url(../blocks/elements/__list/elements__list.css);
 
 @import url(../blocks/element/__image/element__image.css);
 @import url(../blocks/element/__title/element__title.css);
 
-@import url(../blocks/like-icon/like-icon.css);
+@import url(../blocks/element/__like-button/element__like-button.css);
 
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 

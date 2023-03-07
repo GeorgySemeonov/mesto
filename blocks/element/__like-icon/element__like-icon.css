@@ -1,4 +1,4 @@
-.like-icon {
+.element__like-icon {
     width: 22px;
     height: 19px;
     padding: 0;
@@ -6,11 +6,11 @@
 }
 
 
-.like-icon:hover {
-    opacity: 0.6;
+.element__like-icon:hover {
+    opacity: 0.5;
 }
 
-.like-icon:active {
+.element__like-icon:active {
     background: #000000;
-    overflow: hidden;
+    
 }

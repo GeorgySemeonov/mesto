@@ -8,6 +8,7 @@
     justify-self: end;
     transition: opacity 0.3s ease;
     padding: 0;
+    cursor: pointer;
 }
 
 .profile__add-button:hover {

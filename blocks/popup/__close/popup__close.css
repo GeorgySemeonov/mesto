@@ -12,8 +12,10 @@
 
 @media (max-width: 600px) {
     .popup__close {
+        width: 20px;
+        height: 20px;
         justify-content: flex-end;
         align-items: flex-end;
-        right: -6px;
+        right: 0px;
     }
 }

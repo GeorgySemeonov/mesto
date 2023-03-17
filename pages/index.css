@@ -42,7 +42,7 @@
 @import url(../blocks/element/__delite-icon/element__delite-icon.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 
-@import url(../blocks/popup/__image-card/popup__image-card.css);
+@import url(../blocks/popup/_image-card/popup_image-card.css);
 
 @import url(../blocks/popup/_opened/popup_opened.css);
 @import url(../blocks/popup/__container/popup__container.css);

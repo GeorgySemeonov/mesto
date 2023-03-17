@@ -26,36 +26,16 @@
 
             <section class="elements">
                 <ul class="elements__list">
+
+                    <template id="cardTamplate" >
                     <li class="element">
-                        <img src="./images/dombay.jpg" class="element__image" alt="Домбай">
-                        <h2 class="element__title">Домбай</h2>
+                        <img  class="element__image" alt="Домбай">
+                        <h2 class="element__title"></h2>
                         <button type="button" class="element__like-button"><img src="./images/like-icon.svg" class="element__like-icon" alt="Лайк"></button>
+                        <button type="button" class="element__delite-button"><img src="./images/trash-icon.svg" class="element__delite-icon" alt="Удалить"></button>
                     </li>
-                    <li class="element">
-                        <img src="./images/karachaevsk.jpg" class="element__image" alt="Карачаевск">
-                        <h2 class="element__title">Карачаевск</h2>
-                        <button type="button" class="element__like-button"><img src="./images/like-icon.svg" class="element__like-icon" alt="Лайк"></button>
-                    </li>
-                    <li class="element">
-                        <img src="./images/еlbrus-mountain.jpg" class="element__image" alt="Гора Эльбрус">
-                        <h2 class="element__title">Гора Эльбрус</h2>
-                        <button type="button" class="element__like-button"><img src="./images/like-icon.svg" class="element__like-icon" alt="Лайк"></button>
-                    </li>
-                    <li class="element">
-                        <img src="./images/paris.jpg" class="element__image" alt="Париж">
-                        <h2 class="element__title">Париж</h2>
-                        <button type="button" class="element__like-button"><img src="./images/like-icon.svg" class="element__like-icon" alt="Лайк"></button>
-                    </li>
-                    <li class="element">
-                        <img src="./images/volgograd.jpg" class="element__image" alt="Волгоград">
-                        <h2 class="element__title">Волгоград</h2>
-                        <button type="button" class="element__like-button"><img src="./images/like-icon.svg" class="element__like-icon" alt="Лайк"></button>
-                    </li>
-                    <li class="element">
-                        <img src="./images/saint-petersburg.jpg" class="element__image" alt="Санкт-Петербург">
-                        <h2 class="element__title">Санкт-Петербург</h2>
-                        <button type="button" class="element__like-button"><img src="./images/like-icon.svg" class="element__like-icon" alt="Лайк"></button>
-                    </li>
+                   </template>
+
                 </ul>
             </section>
         </main>
@@ -64,7 +44,7 @@
             <p class="footer__copyright">&copy; 2020 Mesto Russia</p>
         </footer>
 
-        <div class="popup">
+        <div id="profilePopup" class="popup">
             <div class="popup__container">
                 <button type="button" class="popup__close"><img class="popup__close-icon" src="./images/close-Icon.svg" alt="Закрыть"></button>
                 <h2 class="popup__title">Редактировать профиль</h2>
@@ -75,5 +55,28 @@
                 </form>
             </div>
         </div>
+        
+        <div id="cardPopup" class="popup">
+            <div class="popup__container">
+                <button type="button" class="popup__close"><img class="popup__close-icon" src="./images/close-Icon.svg" alt="Закрыть"></button>
+                <h2 class="popup__title">Новое место</h2>
+                <form id="popupFormsCard" class="popup__forms">
+                    <input id="nameCard" class="popup__form" type="text" name="title" placeholder="Название">
+                    <input id="imageLink" class="popup__form" type="text" name="link" placeholder="Ссылка на картинку">
+                    <button id="createButton" type="submit" class="popup__button">Создать</button>
+                </form> 
+            </div>
+        </div>
+
+        <div id="imagePopup" class="popup popup__image-card">
+            <div class="popup__image-container">
+                <button type="button" class="popup__close"><img class="popup__close-icon" src="./images/close-Icon.svg" alt="Закрыть"></button>
+                <img  alt="#" class="popup__image">
+                <h2 class="popup__image-title"></h2>
+            </div>
+        </div>
+        
+
+
     </body>
 </html>

@@ -11,7 +11,7 @@
     opacity: 0.5;
 }
 
-.element__like-icon:active {
-    background: #000000;
+.element__like-icon_active {
+    background: url(/images/like-icon-active.svg) ;
     
 }

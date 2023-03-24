@@ -30,7 +30,9 @@ editProfileButton.addEventListener("click", () => {
 });
 
 createCardButton.addEventListener("click", () => {
+
   openPopup(createCardPopup);
+  disableButtonSubmit(submitButtonCard);
 });
 
 function openPopup(popup) {
@@ -59,6 +61,11 @@ function overlayClosePopup(evt) {
   }
 }
 
+const submitButtonCard = popupFormsCard.querySelector('#createButton');
+
+function disableButtonSubmit(submitButtonCard) {
+  submitButtonCard.disabled = true;
+}
 
 
 closeButtons.forEach((button) => {
@@ -145,8 +152,11 @@ function cardFormSubmit(event) {
     name: nameCard.value,
     link: imageLink.value,
   };
+
   renderCard(card, cardsList);
   closePopup(cardPopup);
+  event.target.reset()
+  disableButtonSubmit(submitButtonCard, validationConfig);
 }
 
 initialCards.push(cardFormSubmit);

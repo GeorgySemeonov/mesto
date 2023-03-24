@@ -35,10 +35,31 @@ createCardButton.addEventListener("click", () => {
 
 function openPopup(popup) {
   popup.classList.add("popup_opened");
+  document.addEventListener('keydown', escClosePopup);
+  document.addEventListener('mousedown', overlayClosePopup);
 }
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
+  document.removeEventListener('keydown', escClosePopup);
+  document.removeEventListener('mousedown', overlayClosePopup);
 }
+
+function escClosePopup(evt) {
+  if (evt.key === 'Escape') {
+      evt.target.blur();
+      const popup = document.querySelector('.popup_opened');
+      closePopup(popup);
+  }
+}
+
+
+function overlayClosePopup(evt) {
+  if (evt.target.classList.contains('popup_opened')) {
+      closePopup(evt.target);
+  }
+}
+
+
 
 closeButtons.forEach((button) => {
   const popup = button.closest(".popup");

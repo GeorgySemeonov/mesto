@@ -23,7 +23,6 @@ this._inputErrorClass = validationConfig.inputErrorClass;
     _showInputEror = (input, validationMessage) => {
 
         const errorText = this._formElement.querySelector( `.${input.name}-error` );
-        console.log(errorText);
         errorText.textContent = validationMessage;
         errorText.classList.add(this._activeErrorClass);
         input.classList.add(this._inputErrorClass);

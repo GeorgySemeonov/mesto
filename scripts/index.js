@@ -18,10 +18,6 @@ const validationConfig = {
 
 
 
-
-
-
-
 const initialCards = [
   {
     name: "Архыз",

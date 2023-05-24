@@ -1,3 +1,6 @@
+
+
+
 const showInputEror = (erorTextElement, validationMessage, errorClass) => {
   erorTextElement.textContent = validationMessage;
   erorTextElement.classList.add(errorClass);

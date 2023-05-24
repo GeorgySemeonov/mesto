@@ -1,3 +1,80 @@
+
+import { FormValidator } from './FormValidator.js';
+import { Card } from './Card.js';
+
+
+const validationConfig = {
+  formSelector: ".popup__forms",
+  inputSelector: ".popup__form",
+  submitButtonSelector: ".popup__button",
+  inactiveButtonClass: "popup__button_active",
+
+  errorClassTemplate: ".popup__input-error_type_",
+  errorClass: "popup__input-error",
+
+  inputTypeErrorBorder: "popup__input_border_error",
+};
+
+
+
+
+
+
+
+
+const initialCards = [
+  {
+    name: "Архыз",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
+  },
+  {
+    name: "Челябинская область",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
+  },
+  {
+    name: "Иваново",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
+  },
+  {
+    name: "Камчатка",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
+  },
+  {
+    name: "Холмогорский район",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
+  },
+  {
+    name: "Байкал",
+    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
+  },
+];
+
+function renderCard(item) {
+  const cardItem = new Card(item, '#cardTamplate', showImage);
+  const newCard = cardItem.createCard();
+  document.querySelector('.elements__list').prepend(newCard);
+  
+  console.log(newCard);
+  console.log(cardItem);
+
+  return cardItem.createNewCard;
+} ;
+
+initialCards.forEach(item => {renderCard(item)});
+
+
+
+function showImage(title, url) {
+  popupTitle.textContent = title;
+  image.src = url;
+  image.alt = title;
+
+  openPopup(openImagePopup);
+
+}
+
+console.log(showImage);
+
 const popup = document.querySelector(".popup");
 
 const editProfileButton = document.querySelector(".profile__edit");
@@ -83,65 +160,40 @@ function handleFormSubmit(evt) {
 
 formElement.addEventListener("submit", handleFormSubmit);
 
-const initialCards = [
-  {
-    name: "Архыз",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
-  },
-  {
-    name: "Челябинская область",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
-  },
-  {
-    name: "Иваново",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
-  },
-  {
-    name: "Камчатка",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
-  },
-  {
-    name: "Холмогорский район",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
-  },
-  {
-    name: "Байкал",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
-  },
-];
 
-const createCard = (card) => {
-  const cardTamplate = document
-    .querySelector("#cardTamplate")
-    .content.cloneNode(true);
-  const cardHeading = cardTamplate.querySelector(".element__title");
-  cardHeading.textContent = card.name;
-  const cardImage = cardTamplate.querySelector(".element__image");
-  cardImage.setAttribute("src", card.link);
-  cardImage.setAttribute("alt", card.name);
-  const deliteButton = cardTamplate.querySelector(".element__delite-button");
-  deliteButton.addEventListener("click", deliteCard);
-  const likeButton = cardTamplate.querySelector(".element__like-button");
-  likeButton.addEventListener("click", likeCard);
-  cardImage.addEventListener("click", imageSubmit);
 
-  return cardTamplate;
-};
+// const createCard = (card) => {
+//   const cardTamplate = document
+//     .querySelector("#cardTamplate")
+//     .content.cloneNode(true);
+//   const cardHeading = cardTamplate.querySelector(".element__title");
+//   cardHeading.textContent = card.name;
+//   const cardImage = cardTamplate.querySelector(".element__image");
+//   cardImage.setAttribute("src", card.link);
+//   cardImage.setAttribute("alt", card.name);
+//   const deliteButton = cardTamplate.querySelector(".element__delite-button");
+//   deliteButton.addEventListener("click", deliteCard);
+//   const likeButton = cardTamplate.querySelector(".element__like-button");
+//   likeButton.addEventListener("click", likeCard);
+//   cardImage.addEventListener("click", imageSubmit);
 
-const renderCard = (card, cardsList) => {
-  const cardElement = createCard(card);
-  cardsList.prepend(cardElement);
-};
+//   return cardTamplate;
+// };
 
-initialCards.forEach((card) => {
-  renderCard(card, cardsList);
-});
+// const renderCard = (card, cardsList) => {
+//   const cardElement = createCard(card);
+//   cardsList.prepend(cardElement);
+// };
 
-function deliteCard(event) {
-  const button = event.target;
-  const card = button.closest(".element");
-  card.remove();
-}
+// initialCards.forEach((card) => {
+//   renderCard(card, cardsList);
+// });
+
+//function deliteCard(event) {
+ // const button = event.target;
+//  const card = button.closest(".element");
+ // card.remove();
+//}
 
 popupFormsCard.addEventListener("submit", cardFormSubmit);
 
@@ -153,23 +205,23 @@ function cardFormSubmit(event) {
     link: imageLink.value,
   };
 
-  renderCard(card, cardsList);
+  renderCard(card,popupFormsCard);
   closePopup(cardPopup);
   event.target.reset()
   disableButtonSubmit(submitButtonCard, validationConfig);
 }
 
-initialCards.push(cardFormSubmit);
+// initialCards.push(cardFormSubmit);
 
-function likeCard(event) {
-  event.target.classList.toggle("element__like-icon_active");
-}
+//function likeCard(event) {
+//  event.target.classList.toggle("element__like-icon_active");
+//}
 
-function imageSubmit(event) {
-  image.src = event.target.src;
-  image.setAttribute("alt", popupTitle.textContent);
-  popupTitle.textContent = event.target
-    .closest(".element")
-    .querySelector(".element__title").textContent;
-  openPopup(openImagePopup);
-}
+
+
+
+const formProfileValidator = new FormValidator(validationConfig,profilePopup);
+formProfileValidator.enableValidation();
+
+const formAddCardValidator = new FormValidator(validationConfig,createCardPopup);
+formAddCardValidator.enableValidation();

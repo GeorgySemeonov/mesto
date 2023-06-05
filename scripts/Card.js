@@ -45,6 +45,8 @@ export class Card {
     this._cardPopupImage.addEventListener("click", () => {
       this._imageSubmit();
     });
+
+    
   }
 
   _deleteCard() {
@@ -56,7 +58,7 @@ export class Card {
   }
 
   _imageSubmit() {
-    showImage();
+    showImage( this._name ,this._link);
   }
 }
 

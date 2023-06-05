@@ -46,23 +46,23 @@ export class FormValidator {
   };
 
   _enableButton = () => {
-    this._submitButton.classList.add(this._inactiveButtonClass);
+    this._submitButton.classList.remove(this._inactiveButtonClass);
     this._submitButton.disabled = true;
   };
 
   _disableButton = () => {
-    this._submitButton.classList.remove(this._inactiveButtonClass);
+    this._submitButton.classList.add(this._inactiveButtonClass);
     this._submitButton.disabled = false;
   };
 
   _checkInputValidity = (input) => {
-    const errorText = this._formElement.querySelector(`.${input.name}-error`);
-    console.log(errorText);
+    const errorText = this._formElement.querySelector(`${this._inputErrorClass}${input.name}`);
+    // console.log(errorText);
     if (!input.validity.valid) {
       this._showInputError(input, errorText);
       // console.log(errorText);
     } else {
-      console.log("validno");
+      // console.log("validno");
       this._hideInputError(input, errorText);
     }
   };
@@ -73,9 +73,10 @@ export class FormValidator {
 
   _toggleButtonState = () => {
     if (this._hasInvalidInput()) {
-      this._disableButton();
-    } else {
       this._enableButton();
+    } else {
+      this._disableButton();
+      
     }
   };
   _setEventListeners = () => {

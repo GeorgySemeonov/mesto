@@ -91,7 +91,12 @@ export class FormValidator {
   enableValidation() {
     this._formElement.addEventListener("submit", function (evt) {
       evt.preventDefault();
+     
+    });
+    this._formElement.addEventListener("reset", () => {
+      this._enableButton();
     });
     this._setEventListeners();
+    
   }
 }

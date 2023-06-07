@@ -1,5 +1,18 @@
-import { FormValidator } from "./FormValidator.js";
-import { Card } from "./Card.js";
+
+
+import { FormValidator } from "../FormValidator.js";
+import { Card } from "../Card.js";
+import '../pages/index.css';
+
+import dombayImage from '../images/dombay.jpg';
+import karachaevskImage from '../images/karachaevsk.jpg';
+import еlbrusImage from '../images/еlbrus-mountain.jpg';
+import volgogradImage from '../images/volgograd.jpg';
+import parisImage from '../images/paris.jpg';
+import petersburgImage from '../images/saint-petersburg.jpg';
+
+
+
 
 const validationConfig = {
   formSelector: ".popup__forms",
@@ -15,37 +28,39 @@ const validationConfig = {
 
 const initialCards = [
   {
-    name: "Архыз",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/arkhyz.jpg",
+    name: "Домбай",
+    link: dombayImage
   },
   {
-    name: "Челябинская область",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/chelyabinsk-oblast.jpg",
+    name: "Карачаевск",
+    link: karachaevskImage
   },
   {
-    name: "Иваново",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/ivanovo.jpg",
+    name: "Эльбрус",
+    link: еlbrusImage
   },
   {
-    name: "Камчатка",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kamchatka.jpg",
+    name: "Волгоград",
+    link: volgogradImage
   },
   {
-    name: "Холмогорский район",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/kholmogorsky-rayon.jpg",
+    name: "Париж",
+    link: parisImage
   },
   {
-    name: "Байкал",
-    link: "https://pictures.s3.yandex.net/frontend-developer/cards-compressed/baikal.jpg",
+    name: "Санкт-Петербург",
+    link: petersburgImage
   },
 ];
+
+const cardsList = document.querySelector(".elements__list");
 
 function renderCard(item) {
   const cardItem = new Card(item, "#cardTamplate", showImage);
   const newCard = cardItem.createCard();
-  document.querySelector(".elements__list").prepend(newCard);
+  cardsList.prepend(newCard);
 
-  return cardItem.createNewCard;
+  // return cardItem.createNewCard;
 }
 
 initialCards.forEach((item) => {
@@ -77,7 +92,7 @@ const userNameForm = document.querySelector("#userNameForm");
 const userOccupationForm = document.querySelector("#userOccupationForm");
 const formElement = document.querySelector("#popupForms");
 
-const cardsList = document.querySelector(".elements__list");
+// const cardsList = document.querySelector(".elements__list");
 const popupFormsCard = document.querySelector("#popupFormsCard");
 
 const image = document.querySelector(".popup__image");
@@ -95,7 +110,7 @@ editProfileButton.addEventListener("click", () => {
 
 createCardButton.addEventListener("click", () => {
   openPopup(createCardPopup);
-  disableButtonSubmit(submitButtonCard);
+  
 });
 
 function openPopup(popup) {
@@ -125,16 +140,16 @@ function overlayClosePopup(evt) {
 
 const submitButtonCard = popupFormsCard.querySelector("#createButton");
 
-function disableButtonSubmit(submitButtonCard) {
-  submitButtonCard.disabled = true;
-}
+// function disableButtonSubmit(submitButtonCard) {
+//   submitButtonCard.disabled = true;
+// }
 
 closeButtons.forEach((button) => {
   const popup = button.closest(".popup");
   button.addEventListener("click", () => closePopup(popup));
 });
 
-function handleFormSubmit(evt) {
+function submitEditProfileForm(evt) {
   evt.preventDefault();
   userName.textContent = userNameForm.value;
   userOccupation.textContent = userOccupationForm.value;
@@ -142,7 +157,7 @@ function handleFormSubmit(evt) {
   closePopup(profilePopup);
 }
 
-formElement.addEventListener("submit", handleFormSubmit);
+formElement.addEventListener("submit", submitEditProfileForm);
 
 // const createCard = (card) => {
 //   const cardTamplate = document
@@ -190,7 +205,7 @@ function cardFormSubmit(event) {
   renderCard(card, popupFormsCard);
   closePopup(cardPopup);
   event.target.reset();
-  disableButtonSubmit(submitButtonCard, validationConfig);
+  // this._disableButton(submitButtonCard, validationConfig);
 }
 
 // initialCards.push(cardFormSubmit);

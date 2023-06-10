@@ -1,9 +1,9 @@
 export class Card {
-  constructor(data, templateSelector, showImage) {
+  constructor(data, templateSelector, handleCardClick) {
     this._name = data.name;
     this._link = data.link;
     this._templateSelector = templateSelector;
-    this._cardPopupImage = showImage;
+    this._handleCardClick = handleCardClick;
   }
 
   _getTemplate() {
@@ -44,7 +44,7 @@ export class Card {
 
     this._cardPopupImage = this._card.querySelector(".element__image");
     this._cardPopupImage.addEventListener("click", () => {
-      this._imageSubmit();
+      this._handleCardClick(this._name, this._link);
     });
   }
 
@@ -56,7 +56,7 @@ export class Card {
     this._likeButton.classList.toggle("element__like-icon_active");
   }
 
-  _imageSubmit() {
-    showImage(this._name, this._link);
-  }
+  // _imageSubmit() {
+  //   showImage(this._name, this._link);
+  // }
 }

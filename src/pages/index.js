@@ -85,7 +85,7 @@ editProfileButton.addEventListener("click", () => {
 
 createCardButton.addEventListener("click", () => {
   popupAddCards.open();
-  addCardValidator.enableValidation();
+  addCardValidator.resetValidation();
 });
 
 const profileValidator = new FormValidator(validationConfig, profilePopup);

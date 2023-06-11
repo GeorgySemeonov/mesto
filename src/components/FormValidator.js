@@ -67,6 +67,7 @@ export class FormValidator {
     }
   };
   _setEventListeners = () => {
+    
     this._inputList.forEach((input) => {
       input.addEventListener("input", () => {
         this._checkInputValidity(input);
@@ -74,6 +75,19 @@ export class FormValidator {
       });
     });
   };
+
+
+  resetValidation() {
+    this._toggleButtonState();// <== управляем кнопкой ==
+
+    this._inputList.forEach((inputElement) => {
+      const errorText = this._formElement.querySelector(
+        `${this._inputErrorClass}${inputElement.name}`
+      );
+      this._hideInputError(inputElement, errorText);// <==очищаем ошибки ==
+    });
+
+  }
 
   enableValidation() {
     this._formElement.addEventListener("submit", function (evt) {

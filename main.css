@@ -25,6 +25,7 @@
 .element__like-button{align-self:center;border:none;height:19px;justify-self:end;margin-right:21px;padding:0;width:22px}
 .element__delite-button{background:transparent;border:none;height:19px;justify-self:end;margin-right:20px;margin-top:20px;padding:0;position:absolute;width:18px}
 .element__delite-icon{cursor:pointer;height:19px;padding:0;transition:opacity .3s ease;width:18px}.element__delite-icon:hover{opacity:.6}
+.element__like-count{color:#000;font-family:Inter,Arial,sans-serif;font-size:13px;font-style:normal;font-weight:400;line-height:16px;margin:3px 0 0;text-align:center;width:10px}
 .footer__copyright{color:#545454;font-size:18px;font-weight:400;line-height:22px;margin:0;padding:67px 0 60px}@media (max-width:900px){.footer__copyright{font-size:14px;line-height:17px;padding:48px 19px 36px}}
 .popup_image-card{background:rgba(0,0,0,.9)}
 .popup_opened{display:grid;opacity:1;visibility:visible}
@@ -37,6 +38,7 @@
 .popup__button{background:inherit;border:1px solid #000;border-radius:2px;color:#000;cursor:pointer;font-size:18px;font-weight:400;line-height:22px;margin:48px 0 37px;min-height:50px;min-width:358px;opacity:.2;padding:0;text-align:center}@media (max-width:600px){.popup__button{font-size:14px;line-height:17px;margin:45px 0 25px;min-height:46px;min-width:238px}}
 .popup__button_disabled{background:inherit;border:1px solid #000;color:#000;opacity:.2;pointer-events:none}
 .popup__button_active{background:#000;border:none;border-radius:2px;color:#fff;cursor:pointer;font-size:18px;font-weight:400;line-height:22px;margin:48px 0 37px;min-height:50px;min-width:358px;opacity:1;padding:0;text-align:center;transition:opacity .3s ease}.popup__button_active:hover{opacity:.8}@media (max-width:600px){.popup__button_active{font-size:14px;line-height:17px;margin:45px 0 25px;min-height:46px;min-width:238px}}
+.popup__button_loading{pointer-events:none}
 .popup__close{background-color:transparent;border:none;cursor:pointer;height:32px;padding:0;position:absolute;right:-40px;top:-40px;width:32px}@media (max-width:600px){.popup__close{align-items:flex-end;height:20px;justify-content:flex-end;right:0;width:20px}}
 .popup__close-icon{height:32px;transition:opacity .3s ease;width:32px;z-index:2}@media (max-width:600px){.popup__close-icon{height:20px;width:20px}}.popup__close-icon:hover{opacity:.6}
 .popup__image{max-height:75vh;max-width:75vw}

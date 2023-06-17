@@ -18,38 +18,3 @@ export const validationConfig = {
 
   inputTypeErrorBorder: "popup__input_border_error",
 };
-
-
-// import dombayImage from "../images/dombay.jpg";
-// import karachaevskImage from "../images/karachaevsk.jpg";
-// import еlbrusImage from "../images/еlbrus-mountain.jpg";
-// import volgogradImage from "../images/volgograd.jpg";
-// import parisImage from "../images/paris.jpg";
-// import petersburgImage from "../images/saint-petersburg.jpg";
-
-// export const initialCards = [
-//   {
-//     name: "Домбай",
-//     link: dombayImage,
-//   },
-//   {
-//     name: "Карачаевск",
-//     link: karachaevskImage,
-//   },
-//   {
-//     name: "Эльбрус",
-//     link: еlbrusImage,
-//   },
-//   {
-//     name: "Волгоград",
-//     link: volgogradImage,
-//   },
-//   {
-//     name: "Париж",
-//     link: parisImage,
-//   },
-//   {
-//     name: "Санкт-Петербург",
-//     link: petersburgImage,
-//   },
-// ];

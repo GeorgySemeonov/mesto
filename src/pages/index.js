@@ -118,7 +118,7 @@ const cardSection = new Section(
       cardSection.addItem(cardArray, 'append');
     }
   },
-  ".elements__list"
+  ".elements"
 );
 console.log(cardSection);
 

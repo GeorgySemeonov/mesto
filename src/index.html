@@ -105,14 +105,14 @@
             </div>
           </div>
 
-          <div id="confirmPopup" class="popup">
+          <div id="confirmPopup" class="popup popup_type_confirm">
 
             <div class="popup__container">
 
-                <h2 class="popup__title">Вы уверены?</h2>
+                <h2 class="popup__title popup__title-confirm">Вы уверены?</h2>
 
-                <form class="popup__form"  name="card-form" novalidate>
-                    <button id="confirmButton" type="submit" class="popup__button popup__button_active" >Да</button>
+                <form class="popup__form "  name="card-form" novalidate>
+                    <button id="confirmButton" type="submit" class="popup__button popup__button_active popup__button-confirm" >Да</button>
                 </form>
 
                 <button type="button" class="popup__close"><img class="popup__close-icon" src="<%=require('./images/close-Icon.svg')%>" alt="Закрыть">
@@ -127,14 +127,16 @@
                 <li class="element">
                     <img  class="element__image" src="#" alt="#">
                     <h2 class="element__title"></h2>
+                    <div class="element__like-field">
                     <button type="button" class="element__like-button"><img src="<%=require('./images/like-icon.svg')%>" class="element__like-icon" alt="Лайк"></button>
                     <div class="element__like-count"></div>
+                    </div>
                     <button type="button" class="element__delite-button"><img src="<%=require('./images/trash-icon.svg')%>" class="element__delite-icon" alt="Удалить"></button>
                 </li>
                </template>
 
             <!-- </ul>
-                
+            
         </section> -->
        
     </body>

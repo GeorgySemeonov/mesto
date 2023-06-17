@@ -66,11 +66,11 @@ const createCard = (item) => {
       popupImage.open(name, link);
     },
     handleDelCard: (cardId) => {
-      popupWithConfirm.open();
-      popupWithConfirm.submitCallback(() => {
-        api.delCard(cardId)
+      popupWithConfirms.open();
+      popupWithConfirms.submitCallback(() => {
+        api.deliteCard(cardId)
           .then(() => {
-            popupWithConfirm.close();
+            popupWithConfirms.close();
             cardItem.deleteCard();
           })
           .catch((error) => {
@@ -108,8 +108,8 @@ const createCard = (item) => {
 //   popupImage.open(name, link);
 // };
 
-const popupWithConfirm = new PopupWithConfirm('#confirmPopup');
-popupWithConfirm.setEventListeners();
+const popupWithConfirms = new PopupWithConfirm('.popup_type_confirm');
+popupWithConfirms.setEventListeners();
 
 const cardSection = new Section(
   {

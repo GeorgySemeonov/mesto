@@ -29,14 +29,14 @@ const api = new Api({
   url: 'https://mesto.nomoreparties.co/v1/cohort-68',
   headers: {
     authorization: '3198a316-5945-45ef-bc5b-580139a53c17',
-    'Content-Type': 'application/json'
+    "Content-Type": "application/json"
   }
 });
 
 Promise.all([api.getDataProfile(), api.getInitialCards()])
   .then(([profInfo, cardsData]) => {
     console.log(profInfo);
-    console.log(cardSection);
+    console.log(cardsData);
     userId = profInfo._id;
     profileInfo.setUserInfo(profInfo);
     cardSection.renderItems(cardsData);
@@ -97,7 +97,7 @@ const createCard = (item) => {
         });
     },
   },
-    "element");
+    ".element__tamplate");
 
   const newCard = cardItem.createCard();
   return newCard;
@@ -120,7 +120,7 @@ const cardSection = new Section(
   },
   ".elements__list"
 );
-
+console.log(cardSection);
 //cardSection.renderItems();
 
 const popupProfile = new PopupWithForm("#profilePopup", handleProfileFormSubmit);
@@ -195,10 +195,10 @@ editAvatarButton.addEventListener('click', function () {
 editProfileButton.addEventListener("click", () => {
   const userInfo = profileInfo.getUserInfo();
   userNameForm.value = userInfo.name;
-  userOccupationForm.value = userInfo.info;
+  userOccupationForm.value = userInfo.infos;
   popupProfile.open();
 });
-
+console.log(userNameForm.value);
 createCardButton.addEventListener("click", () => {
   popupAddCards.open();
   addCardValidator.resetValidation();

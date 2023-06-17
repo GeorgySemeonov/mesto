@@ -49,9 +49,9 @@
                     
                     <span class="popup__input-error popup__input-error_type_name"></span>
                     
-                    <input required id="userOccupationForm" class="popup__form" type="text" name="occupation" placeholder="Должность" minlength="2" maxlength="200">
+                    <input required id="userOccupationForm" class="popup__form" type="text" name="about" placeholder="Должность" minlength="2" maxlength="200">
                     
-                    <span class="popup__input-error popup__input-error_type_occupation"></span>
+                    <span class="popup__input-error popup__input-error_type_about"></span>
                     
                     <button type="submit" class="popup__button  ">Сохранить</button>
                 </form>
@@ -63,9 +63,9 @@
                 <button type="button" class="popup__close"><img class="popup__close-icon" src="<%=require('./images/close-Icon.svg')%>" alt="Закрыть"></button>
                 <h2 class="popup__title">Новое место</h2>
                 <form id="popupFormsCard" class="popup__forms" name="card" novalidate>
-                    <input required id="nameCard" class="popup__form " type="text" name="title" placeholder="Название" minlength="2" maxlength="30">
+                    <input required id="nameCard" class="popup__form " type="text" name="name" placeholder="Название" minlength="2" maxlength="30">
                     
-                    <span class="popup__input-error popup__input-error_type_title"></span>
+                    <span class="popup__input-error popup__input-error_type_name"></span>
                    
                     <input required  id="imageLink" class="popup__form" type="url" name="link" placeholder="Ссылка на картинку">
                     
@@ -98,7 +98,7 @@
                 
                   <input id="avatar-input" type="url" class="popup__form "
                          name="avatar" required placeholder="Введите ссылку на аватар" minlength="2" maxlength="200">
-                    <span class="popup__input-error popup__input-error_type_link"></span>
+                    <span class="popup__input-error popup__input-error_type_avatar"></span>
                
                 <button id="createButton" type="submit" class="popup__button  ">Сохранить</button>
               </form>
@@ -112,9 +112,9 @@
                 <h2 class="popup__title">Вы уверены?</h2>
 
                 <form class="popup__form"  name="card-form" novalidate>
-                    <button id="confirmButton" type="submit" class="popup__button">Да</button>
+                    <button id="confirmButton" type="submit" class="popup__button popup__button_active" >Да</button>
                 </form>
-                
+
                 <button type="button" class="popup__close"><img class="popup__close-icon" src="<%=require('./images/close-Icon.svg')%>" alt="Закрыть">
                 </button>
             </div>
@@ -125,7 +125,7 @@
 
                 <template id="cardTamplate" class="element__tamplate" >
                 <li class="element">
-                    <img  class="element__image" >
+                    <img  class="element__image" src="#" alt="#">
                     <h2 class="element__title"></h2>
                     <button type="button" class="element__like-button"><img src="<%=require('./images/like-icon.svg')%>" class="element__like-icon" alt="Лайк"></button>
                     <div class="element__like-count"></div>

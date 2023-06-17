@@ -76,7 +76,6 @@ export class FormValidator {
     });
   };
 
-
   resetValidation() {
     this._toggleButtonState();// <== управляем кнопкой ==
 

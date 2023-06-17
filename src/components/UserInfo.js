@@ -4,7 +4,7 @@ export default class UserInfo {
         this._profileInfo = document.querySelector(profileDescription);
         this._profileAvatar = document.querySelector(profileAvatar);
     }
-
+    
     getUserInfo() {
         this._userInfo = {
             name: this._profileName.textContent,

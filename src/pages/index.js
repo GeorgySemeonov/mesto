@@ -121,6 +121,7 @@ const cardSection = new Section(
   ".elements__list"
 );
 console.log(cardSection);
+
 //cardSection.renderItems();
 
 const popupProfile = new PopupWithForm("#profilePopup", handleProfileFormSubmit);

@@ -19,6 +19,7 @@ export const validationConfig = {
   inputTypeErrorBorder: "popup__input_border_error",
 };
 
+
 // import dombayImage from "../images/dombay.jpg";
 // import karachaevskImage from "../images/karachaevsk.jpg";
 // import еlbrusImage from "../images/еlbrus-mountain.jpg";

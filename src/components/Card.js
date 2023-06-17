@@ -96,10 +96,6 @@ _handleDeleteLike() {
     this._card = null;
   }
 
-  // _likeCard() {
-    
-  // }
-
   // _imageSubmit() {
   //   showImage(this._name, this._link);
   // }
